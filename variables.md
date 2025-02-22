@@ -1,6 +1,7 @@
 # 📌 Variables in Python  
 
-Variables store data in memory and hold different types of values. They allow us to store, modify, and retrieve data during program execution. Python variables do not require explicit declaration; they are dynamically typed.  
+Variables store data in memory and hold different types of values. They allow us to store, modify, and retrieve data during program execution. Python variables do not require explicit declaration; they are dynamically typed. 
+(eg. `x = 10` here `x` is a variable that holds data `10` in it.)
 
 ## 🔹 Theory:
 - **Integer (`int`)** → Whole numbers like `10`.  
