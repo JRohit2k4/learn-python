@@ -5,7 +5,8 @@
 This repository contains **fundamental Python concepts**, including variables, data types, conditionals, loops, functions, object-oriented programming (OOP), modules, file handling, and exception handling.  
 
 ## 🔹 Topics We Will Be Covering:  
-- ✔ **Variables & Data Types**  
+- ✔ **Variables & Data Types**
+- ✔ **Operators**  
 - ✔ **Conditional Statements (`if-else`)**  
 - ✔ **Loops (`for`, `while`)**  
 - ✔ **Functions & Lambda Functions**  
