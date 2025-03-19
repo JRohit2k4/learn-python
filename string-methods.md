@@ -4,6 +4,7 @@ Python provides several built-in methods to manipulate strings. Below is a list 
 
 ---
 
+## 1️⃣ **Changing Case**
 
 ### `upper()` - Converts all characters to uppercase
 ```python
@@ -37,6 +38,7 @@ print(text.swapcase())  # Output: hELLO wORLD
 
 ---
 
+## 2️⃣ **Checking String Content**
 
 ### `startswith(substring)` - Checks if the string starts with the given substring
 ```python
@@ -68,7 +70,7 @@ text = "Hello123"
 print(text.isalnum())  # Output: True
 ```
 
-### `isspace()` - Returns `True` if all characters are space
+### `isspace()` - Returns `True` if all characters are whitespace
 ```python
 text = "   "
 print(text.isspace())  # Output: True
@@ -76,11 +78,18 @@ print(text.isspace())  # Output: True
 
 ---
 
+## 3️⃣ **Finding and Replacing**
 
 ### `find(substring)` - Returns the index of the first occurrence of `substring`, or `-1` if not found
 ```python
-text = "Python is amazing"
-print(text.find("is"))  # Output: 7
+text = "hello world"
+print(text.find("o"))  # Output: 4
+```
+
+### `rfind(substring)` - Returns the index of the last occurrence of `substring`, or `-1` if not found
+```python
+text = "hello world hello"
+print(text.rfind("hello"))  # Output: 12
 ```
 
 ### `replace(old, new)` - Replaces all occurrences of `old` with `new`
@@ -91,25 +100,50 @@ print(text.replace("love", "like"))  # Output: I like Python
 
 ---
 
+## 4️⃣ **String Length**
+
+### `len(string)` - Returns the length of the string
+```python
+text = "hello world"
+print(len(text))  # Output: 11
+```
+
 ---
 
+## 5️⃣ **Splitting and Joining Strings**
+
+### `split(separator)` - Splits the string into a list based on the separator
+```python
+text = "apple,banana,cherry"
+print(text.split(","))  # Output: ['apple', 'banana', 'cherry']
+```
+
+### `join(iterable)` - Joins elements of an iterable into a string with a separator
+```python
+words = ["hello", "world"]
+print(" ".join(words))  # Output: hello world
+```
+
+---
+
+## 6️⃣ **Stripping Whitespaces**
 
 ### `strip()` - Removes leading and trailing spaces
 ```python
-text = "   Hello World   "
-print(text.strip())  # Output: "Hello World"
+text = "   hello world   "
+print(text.strip())  # Output: "hello world"
 ```
 
 ### `lstrip()` - Removes leading spaces
 ```python
-text = "   Hello World"
-print(text.lstrip())  # Output: "Hello World"
+text = "   hello world"
+print(text.lstrip())  # Output: "hello world"
 ```
 
 ### `rstrip()` - Removes trailing spaces
 ```python
-text = "Hello World   "
-print(text.rstrip())  # Output: "Hello World"
+text = "hello world   "
+print(text.rstrip())  # Output: "hello world"
 ```
 
 ---
@@ -118,3 +152,4 @@ print(text.rstrip())  # Output: "Hello World"
 ✅ Improves Readability  
 ✅ Makes Text Manipulation Easier  
 ✅ Enhances Code Efficiency  
+
