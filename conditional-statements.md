@@ -66,6 +66,7 @@ Used for quick conditional assignments.
 ### Example:
 ```python
 x = 10
+#formula = 'X' if condition else 'Y'
 result = "Greater" if x > 5 else "Smaller"
 print(result)  # Output: Greater
 ```
