@@ -1,6 +1,6 @@
 ## 1. List
 
-A **list** in Python is:
+**List** in Python is:
 - ✅ Ordered (the order of elements is maintained)
 - ✅ Changeable (you can update, add, or remove items)
 - ✅ Allows duplicates
@@ -55,3 +55,15 @@ print(fruits.index(mango))
 # Prints the index number of mango in the list
 print(fruits.count(banana))
 # 1
+
+```
+
+
+## 2. Set
+
+**Set** in Python is:
+- ✅ Unordered
+- ✅ Changeable (you can update, add, or remove items)
+- ✅ NO duplicates
+
+---
