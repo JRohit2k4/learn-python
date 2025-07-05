@@ -62,9 +62,9 @@ print(fruits.count(banana))
 ## 2. Set
 
 **Set** in Python is:
-- ✅ Unordered
+- ❌ Unordered
 - ✅ Changeable (you can update, add, or remove items)
-- ✅ NO duplicates
+- ❌ NO duplicates
 
 ---
 
@@ -98,3 +98,43 @@ fruits.clear()
 # {}                    
 
 ```
+
+## 3. Tuple
+
+**Tuple** in Python is:
+- ✅ Ordered
+- ❌ Unchangeable (you can not update, add, or remove items)
+- ✅ Duplicates OK
+- ✅ Faster
+
+---
+
+## 📍 Example:
+```python
+fruits = ('apple", "banana", "orange", "mango")
+
+| Method                          | Description                                      |
+| ------------------------------- | ------------------------------------------------ |
+| `print(fruits.index("apple"))`  | Shows the index/positio of an element            |
+| `pint(fruits.count("mango"))`   | Shows the occurenc of an element                 |
+| `print(len(fruits))`            | Prints the length                                |
+| `print("mango" in fruits)`      | Prints the entered element                       | 
+
+fruits = ("apple", "banana", "orange", "mango")
+
+# Shows the index/positio of an element
+print(fruits.index("apple"))         
+# 0
+
+# Shows the occurenc of an element
+pint(fruits.count("mango"))             
+# ("apple", "banana", "orange", "pineapple")
+
+# Prints the length 
+print(len(fruits))      
+# 3
+
+# Prints the entered element
+print("mango" in fruits)
+# (mango)                    
+
