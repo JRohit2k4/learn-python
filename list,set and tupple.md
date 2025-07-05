@@ -67,3 +67,34 @@ print(fruits.count(banana))
 - ✅ NO duplicates
 
 ---
+
+## 📍 Example:
+```python
+fruits = {"apple", "banana", "orange", "mango"}
+
+| Method                          | Description                                      |
+| ------------------------------- | ------------------------------------------------ |
+| `fruits.add("pineapple")`       | Adds "pineapple" to the set                      |
+| `fruits.remove("mango")`        | Removes "mango" from the set                     |
+| `fruits.pop()`                  | Removes first(random) element from the set       |
+| `fruits.clear()`                | Removes all elements from the list               | 
+
+fruits = {"apple", "banana", "orange", "mango"}
+
+# Add pineapple to the end
+fruits.add("pineapple")         
+# {"apple", "banana", "orange", "mango", "pineapple"}
+
+# Remove mango
+fruits.remove("mango")             
+# {"apple", "banana", "orange", "pineapple"}
+
+# Removes first(random) element from the set
+fruits.pop()      
+# {"apple", "banana", "orange", "pineapple"}
+
+# Clear all elements from the list
+fruits.clear()
+# {}                    
+
+```
