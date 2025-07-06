@@ -33,3 +33,19 @@ for question in questions:
     print("INCORECT!")
     print(f"{answers[question_num]} is the correct answer.")
   question_num += 1
+
+
+print("--------------------")
+print("       RESULT       ")
+print("--------------------")
+
+
+print("Answers: ",end=" ")
+for answer in answers:
+  print(answer,end= "")
+print()
+
+print("Guesses: ",end=" ")
+for guess in guesses:
+  print(guess,end= "")
+print()
