@@ -24,3 +24,29 @@ capitals = {"India":"New Delhi",
 | `capitals.clear()`                          | Clears the dictionary                   |
 
 ````
+
+capitals = {"India":"New Delhi",
+            "USA":"Washington D.C.",
+            "Japan":"Tokyo",
+            "China":"Beijing",
+            "Russia":"Moscow"}  
+
+# Gets the value of India
+print(capitals.get("India"))         
+# New Delhi
+
+# Updates the value of USA
+capitals.update({"USA":"Detroit"})
+
+# Adds the new pair
+capitals.update({"Australia":"Sydney"})
+
+# Removes the pair China
+capitals.pop("China")           
+
+# Removes the last pair
+capitals.popitem()         
+
+# Clears the dictionary
+capitals.clear()         
+
