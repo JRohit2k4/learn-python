@@ -1,9 +1,9 @@
-menu = {"pizza":200,
-        "burger":150,
-        "popcorn":500,
-        "tacos":100,
-        "frankie":100,
-        "coke":50}
+menu = {"Pizza":200,
+        "Burger":150,
+        "Popcorn":500,
+        "Tacos":100,
+        "Frankie":100,
+        "Coke":50}
 
 cart = []
 total = 0
@@ -21,11 +21,15 @@ while True:
     break
   elif menu.get(food) is not None:
     cart.append(food)
+  else:
+    print(f"Sorry! {food} is not available.")
+  
 
 print("------ YOUR ORDER ------")
 for food in cart:
+  price = menu[food]
   total += menu.get(food)
-  print(food)
+  print(f"{food.capitalize():10}:Rs.{price:.2f} ")
 
 print("------------------------")
 print(f"Your total is Rs.{total:.2f}")
