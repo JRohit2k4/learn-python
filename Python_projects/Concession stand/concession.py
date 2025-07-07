@@ -16,21 +16,25 @@ for key, value in menu.items():
 print("------------------------")
 
 while True:
-  food = input("Select an item (q for quit): ").lower()
-  if food == "q":
+  food = input("Select an item (q for quit): ").capitalize()
+  if food == "Q":
     break
   elif menu.get(food) is not None:
     cart.append(food)
   else:
     print(f"Sorry! {food} is not available.")
-  
-
-print("------ YOUR ORDER ------")
-for food in cart:
-  price = menu[food]
-  total += menu.get(food)
-  print(f"{food.capitalize():10}:Rs.{price:.2f} ")
-
-print("------------------------")
-print(f"Your total is Rs.{total:.2f}")
 print()
+
+if not cart:
+  print("You didn't ordered anything.")
+  print()
+else:
+  print("------ YOUR ORDER ------")
+  for food in cart:
+    price = menu[food]
+    total += menu.get(food)
+    print(f"{food.capitalize():10}:Rs.{price:.2f} ")
+
+  print("------------------------")
+  print(f"Your total is Rs.{total:.2f}")
+  print()
