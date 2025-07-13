@@ -13,7 +13,7 @@ greet("Rohit")
 ## Types of Arguments
 
 
-##1.Positional Argument
+## 1.Positional Argument  
 Values are passed in the **same order** as parameters.  
 ```python
 def net_price(list_price, discount, tax)
@@ -21,7 +21,7 @@ def net_price(list_price, discount, tax)
 net_price(500,0.5,0.1)
 ```
 
-## 1.Default Arguments
+## 2.Default Arguments
 A default parameters default is used when that argument is omitted make your functions more flexible, reduces number of arguments.
 ```python
 def net_price(list_price, discount=0.5, tax=0.1)
@@ -29,7 +29,7 @@ def net_price(list_price, discount=0.5, tax=0.1)
 net_price(500)
 ```
 
-## 2.Keyword Arguments
+## 3.Keyword Arguments
 You can pass argumnets **by name**, not just by position.
 ```python
 def student_info(name, age):
