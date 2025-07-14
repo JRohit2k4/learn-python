@@ -23,3 +23,17 @@ if student not in students:
 else:
   print(f"{student} is a student")
 ```
+
+**example using dictionary**
+```python
+grades = ("Spongebob":"A",
+          "Patrick":"B",
+          "Sandy":"C")
+
+student = input("ENter name of student: ").capitalize()
+
+if student in grades:
+  print(f"{student}'s grade is {grades[student]}")
+else:
+  print(f"{student} was not found")
+```
