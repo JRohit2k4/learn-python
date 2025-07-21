@@ -2,7 +2,7 @@ import random
 
 def spin_row():
   symbols = ("⭐","🍒","🔔")
-  return[random.choice(symbols) for symbol in range(3)]
+  return[random.choice(symbols) for symbol in range(3)] #used list comprehension to shorten the code
 
 def print_row(row):
   print("********************")
