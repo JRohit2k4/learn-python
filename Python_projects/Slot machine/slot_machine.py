@@ -1,8 +1,14 @@
-def spin_row():
-  pass
+import random
 
-def print_row():
-  pass
+def spin_row():
+  symbols = ("⭐","🍒","🔔")
+  return[random.choice(symbols) for symbol in range(3)]
+
+def print_row(row):
+  print("********************")
+  print(" | ".join(row))
+  print("********************")
+
 
 def get_payout():
   pass
@@ -35,3 +41,6 @@ while balance > 0:
 
   balance -= bet
   
+  row = spin_row
+  print("Spinning...\n")
+  print_row(row)
