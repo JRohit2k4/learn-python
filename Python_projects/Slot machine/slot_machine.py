@@ -10,8 +10,15 @@ def print_row(row):
   print("********************")
 
 
-def get_payout():
-  pass
+def get_payout(row, bet):
+  if row[0] == row[1] == row[2]
+    if row[0] == '🍒':
+      return bet * 2
+    if row[0] == '🔔':
+      return bet * 5
+    if row[0] == '⭐':
+      return bet * 10
+  return 0
 
 balance = 100
 
@@ -44,3 +51,12 @@ while balance > 0:
   row = spin_row
   print("Spinning...\n")
   print_row(row)
+
+  payout = get_payout(row, bet)
+  if payout > 0:
+    print(f"You won Rs.{payout}")
+  else:
+    print("Sorry! Try again.")
+
+  balance += payout
+  
