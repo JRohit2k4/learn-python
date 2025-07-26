@@ -1,4 +1,5 @@
 import random
+import time
 
 def spin_row():
   symbols = ("⭐","🍒","🔔")
@@ -11,7 +12,7 @@ def print_row(row):
 
 
 def get_payout(row, bet):
-  if row[0] == row[1] == row[2]
+  if row[0] == row[1] == row[2]:
     if row[0] == '🍒':
       return bet * 2
     if row[0] == '🔔':
@@ -50,6 +51,7 @@ while balance > 0:
   
   row = spin_row
   print("Spinning...\n")
+  time.sleep(2)
   print_row(row)
 
   payout = get_payout(row, bet)
@@ -59,4 +61,12 @@ while balance > 0:
     print("Sorry! Try again.")
 
   balance += payout
-  
+
+  if balance  == 0:
+    print("Sorry you are out of balance.\nExiting game.")  
+    break
+
+  play_again = input("Wanna play again? (y/n): ")
+  if play_again != 'y'.lower():
+    print(f"Thanks for playing.\nNow you have Rs.{balance}")
+    break
