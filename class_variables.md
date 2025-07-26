@@ -17,5 +17,7 @@ class Student:
 student1 = Student("Spongebob", 19)
 student2 = Student("Patric", 20)
 
-#print(f"{student1.name} is a {student1.age} years old student and will graduate in year {student1.class_year}.")
 print(f"My graduating class of {Student.class_year} has {Student.student_num} students")
+
+#Output:
+My graduating class of 2024 has 2 students
