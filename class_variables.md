@@ -20,4 +20,4 @@ student2 = Student("Patric", 20)
 print(f"My graduating class of {Student.class_year} has {Student.student_num} students")
 
 #Output:
-My graduating class of 2024 has 2 students
+#My graduating class of 2024 has 2 students
