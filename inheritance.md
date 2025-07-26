@@ -14,7 +14,7 @@ class Animal: #parent class
   def sleep(self):
     print(f"{self.name} is sleeping")
 
-class Dog(Animal):
+class Dog(Animal): #child class inheriting parent class attributes
   def speak(self):
     print("WOOF!")
 
