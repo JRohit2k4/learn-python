@@ -14,14 +14,11 @@ class Car:
     self.year = year
     self.color = color
 
+#creating object
 car1 = Car("Ford", "Mustang", 1969, "Red")
 car2 = Car("Chevy", "Camaro", 2022, "Yellow")
 
-#print(f"First car's manufacturer company is: {car1.company}")
-#print(f"First car model is: {car1.model}")
-#print(f"Manufactured year is: {car1.year}")
-#print(f"Color: {car1.color}")
-
+#Accessing object attributes
 print(f"First car is {car1.year} {car1.color} {car1.company} {car1.model}")
 print(f"Second car is {car2.year} {car2.color} {car2.company} {car2.model}")
 
