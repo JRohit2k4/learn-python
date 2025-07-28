@@ -33,6 +33,12 @@ mouse = Mouse("Mickey")
 cat.sleep()
 dog.eat()
 mouse.speak()
+
+#OUTPUT:
+       #Garfield is sleeping
+       #Scooby is eating
+       #SQEEK!
+
 ```
 
 ## Multiple inheritance  
@@ -64,6 +70,12 @@ rabbit.flee()
 hawk.hunt()
 fish.flee()
 fish.hunt()
+
+#OUTPUT:
+       #Animal is fleeing
+       #Animal is hunting
+       #Animal is fleeing
+       #Animal is hunting
 ```
 
 ## Multilevel inheritance  
@@ -110,4 +122,12 @@ fish.flee()
 fish.hunt()
 rabbit.sleep()
 fish.eat()
+
+#OUTPUT:
+       #Bugs is fleeing
+       #Tony is hunting
+       #Nemo is fleeing
+       #Nemo is hunting
+       #Bugs is sleeping
+       #Nemo is eating
 ```
