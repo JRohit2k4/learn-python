@@ -8,20 +8,33 @@ seconds = 1672215379.5045543 #seconds passed since epoch
 local_time = time.ctime(seconds)
 
 def quiz():
-  questions = ("1. How many elements are in the periodic table?: ",
-              "2. Which animal lays the largest egg?: ",
-              "3. What is the most abundant gas in Earth's atmosphere?: ",
-              "4. How many bones are in human body?: ",
-              "5. Which planet in the solar system is the hottest?: ")
+  questions = (
+    "1. How many elements are in the periodic table?: ",
+    "2. Which animal lays the largest egg?: ",
+    "3. What is the most abundant gas in Earth's atmosphere?: ",
+    "4. How many bones are in human body?: ",
+    "5. Which planet in the solar system is the hottest?: ",
+    "6. Who developed the theory of relativity?: ",
+    "7. What is the capital city of Australia?: ",
+    "8. Which ocean is the largest?: ",
+    "9. Which programming language is known for its snake logo?: ",
+    "10. What is the chemical symbol for gold?: "
+  )
 
-  options = (("A. 118", "B. 119", "C. 122", "D. 121"),
-            ("A. Whale", "B. Elephant", "C. Snake", "D. Ostrich"),
-            ("A. Oxygen", "B. Hydrogen", "C. CO2", "D. Nitrogen"),
-            ("A. 216", "B. 207", "C. 206", "D. 211"),
-            ("A. Mars", "B. Mercury", "C. Venus", "D. Earth"))
+  options = (
+      ("A. 118", "B. 119", "C. 122", "D. 121"),
+      ("A. Whale", "B. Elephant", "C. Snake", "D. Ostrich"),
+      ("A. Oxygen", "B. Hydrogen", "C. CO2", "D. Nitrogen"),
+      ("A. 216", "B. 207", "C. 206", "D. 211"),
+      ("A. Mars", "B. Mercury", "C. Venus", "D. Earth"),
+      ("A. Isaac Newton", "B. Albert Einstein", "C. Nikola Tesla", "D. Galileo Galilei"),
+      ("A. Sydney", "B. Melbourne", "C. Canberra", "D. Brisbane"),
+      ("A. Indian Ocean", "B. Atlantic Ocean", "C. Arctic Ocean", "D. Pacific Ocean"),
+      ("A. Java", "B. Python", "C. Ruby", "D. C++"),
+      ("A. Au", "B. Ag", "C. Go", "D. Gd")
+    )
 
-  answers = ("A","D","D","C","C")
-
+  answers = ("A","D","D","C","C","B","C","D","B","A")
 
 
   running = True
@@ -33,6 +46,7 @@ def quiz():
     question_num = 0
 
     for question in questions:
+      speak("This quiz will contain 10 questions.")
       print(" STARTING QUIZ GAME ")
       print("--------------------")
       print(question)
