@@ -92,9 +92,9 @@ def quiz():
 #    print("Welcome to Slot machine.")
 #    print("Symbols: 🍒 🔔 7️⃣ ⭐ ")
 
-    def spin_row():
-        symbols = ['🍒', '🔔', ' 7️⃣', '⭐']
-        return [random.choice(symbols) for _ in range(3)]
+#    def spin_row():
+#        symbols = ['🍒', '🔔', ' 7️⃣', '⭐']
+#        return [random.choice(symbols) for _ in range(3)]
 
 def speak(text):
     engine = pyttsx3.init()
