@@ -85,16 +85,90 @@ def quiz():
         running = False
         print()
 
-#def casino_game():
-#    import random
-#    balance = 100
-#    speak("Welcome to the slot machine.")
-#    print("Welcome to Slot machine.")
-#    print("Symbols: 🍒 🔔 7️⃣ ⭐ ")
 
-#    def spin_row():
-#        symbols = ['🍒', '🔔', ' 7️⃣', '⭐']
-#        return [random.choice(symbols) for _ in range(3)]
+  
+def casino_game():
+    import random
+    balance = 100
+    speak("Welcome to the slot machine.")
+    print("Welcome to Slot machine.")
+    print("Symbols: 🍒 🔔 7️⃣ ⭐ ")
+
+    def spin_row():
+        symbols = ['🍒', '🔔', ' 7️⃣', '⭐']
+        return [random.choice(symbols) for _ in range(3)]
+
+    def print_row(row):
+        print("|".join(row))
+        #speak(" ".join(row))
+
+    def get_payout(row, bet):
+        if row[0] == row[1] == row[2]:
+            if row[0] == '🍒':
+                return bet * 3
+            elif row[0] == '🔔':
+                return bet * 5
+            elif row[0] == '7️⃣':
+                return bet * 8
+            elif row[0] == '⭐':
+                return bet * 10
+        return 0
+
+    while balance > 0:
+        print(f"Current balance is Rs.{balance}")
+        speak(f"Your current balance is {balance} rupees")
+
+        bet = input("Enter your bet amount: ")
+        speak("Enter your bet amount.")
+
+        if not bet.isdigit():
+            print("Please enter a valid number.")
+            speak("Please enter a valid number.")
+            continue
+        
+        bet = int(bet)
+
+        if bet > balance:
+            print("Insufficient funds.")
+            speak("Insufficient funds.")
+            continue
+            
+        if bet <= 0:
+            print("Bet must be greater than 0.")
+            speak("Bet must be greater than zero.")
+            continue 
+
+        balance -= bet
+
+        row = spin_row()
+        print("Spinning...\n")
+        speak("Spinning")
+        time.sleep(1)
+        print_row(row)
+
+        payout = get_payout(row, bet)
+        if payout > 0:
+            print(f"You won Rs.{payout}!")
+            speak(f"You won {payout} rupees")
+        else:
+            print("Sorry! You lost this round.")
+            speak("Sorry! You lost this round.")
+
+        balance += payout
+
+        if balance == 0:
+            print("Sorry you are out of balance. Exiting game...")
+            speak("Sorry you are out of balance. Exiting game.")
+            break
+
+        play_again = input("Wanna play again? (y/n): ").lower()
+        speak("Wanna play again?")
+        if play_again != 'y':
+            print("Thanks for playing the slot machine!")
+            speak("Thanks for playing the slot machine!")
+            print("GAME OVER")
+            print()
+            break
 
 def speak(text):
     engine = pyttsx3.init()
@@ -143,8 +217,8 @@ while True:
     elif "quiz" in user_input:
        quiz()
 
-#    elif "casino" in user_input:
-#      casino_game()
+    elif "casino" in user_input:
+       casino_game()
 
     elif "bye" in user_input:
         response = "Goodbye! Have a great day!"
