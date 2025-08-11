@@ -85,6 +85,17 @@ def quiz():
         running = False
         print()
 
+#def casino_game():
+#    import random
+#    balance = 100
+#    speak("Welcome to the slot machine.")
+#    print("Welcome to Slot machine.")
+#    print("Symbols: 🍒 🔔 7️⃣ ⭐ ")
+
+    def spin_row():
+        symbols = ['🍒', '🔔', ' 7️⃣', '⭐']
+        return [random.choice(symbols) for _ in range(3)]
+
 def speak(text):
     engine = pyttsx3.init()
     engine.say(text)
@@ -131,6 +142,9 @@ while True:
 
     elif "quiz" in user_input:
        quiz()
+
+#    elif "casino" in user_input:
+#      casino_game()
 
     elif "bye" in user_input:
         response = "Goodbye! Have a great day!"
